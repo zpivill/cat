@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ทายใจพี่ได้ไหม">
     <title>เกมเดาแมว</title>
-    <meta name="description" content="เล่นได้วันละ4ครั้งนะ">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
@@ -23,6 +23,7 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
+            margin-top: 10vh;
         }
 
         .container {
@@ -31,6 +32,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        .yap {
+            width: 0%;
+            max-width: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: right;
         }
 
         h1 {
@@ -245,55 +254,54 @@
             opacity: 0.5; /* Make it visually clear the game is disabled */
             pointer-events: none; /* Prevent clicks */
         }
-
     </style>
 </head>
-<body>
+<body> 
     <div class="container">
-        <h1>เดาว่าพี่ชอบแมวตัวไหน</h1>
-        <div class="game-container">
-            <div class="level-indicator">Level 1</div>
-
-            <div class="card" id="cat-card">
-                <img id="cat-image" src="/api/placeholder/400/320" alt="Cat image">
-                <div class="card-description" id="cat-description">นี่คือแมวธรรมดา</div>
-                <div class="swipe-indicator swipe-left" id="swipe-left">✖</div>
-                <div class="swipe-indicator swipe-right" id="swipe-right">✓</div>
-                <div class="incorrect-overlay" id="incorrect-overlay">❌</div>
-            </div>
-
-            <div class="buttons">
-                <button class="btn btn-reject" id="reject-btn">✖</button>
-                <button class="btn btn-like" id="like-btn">✓</button>
-            </div>
-
-            <div class="level-complete">
-                <h2>ถูกต้องพี่ชอบแมวอ้วน</h2>
-                <p>ต่อไปเดาว่าพี่เลี้ยงแมวตัวไหน</p>
-                <button class="next-btn" id="next-level-btn">มันจะไปยากไรว่ะ</button>
-            </div>
-
-            <div class="success-screen">
-                <h2>สุดยอด</h2>
-                <p>คำใบ้เพิ่มคือแมนยูทีมกาก</p>
-                <p id="final-message">ถึงพี่จะเกี่ยวข้องกับนักเตะคนนึงก็เถอะ</p>
-                <button class="retry-btn" id="restart-btn">ว่างว่ะเล่นใหม่</button>
-            </div>
-
-            <div class="incorrect-screen">
-                <h2>ผิดคับน้อง</h2>
-                <p>ไม่ใช่แมวตัวนี้</p>
-                <p>ไปลองใหม่ไป</p>
-                <button class="retry-btn" id="retry-btn">ขออนุญาติแก้ตัวครับ</button>
-            </div>
-
-            <!-- New screen to display when the daily limit is reached -->
-            <div class="daily-limit-reached">
-                <h2>หมดโควต้าวันนี้แล้วนะ</h2>
-                <p>พรุ่งนี้มาเล่นใหม่นะจ๊ะ</p>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+          <h1>เดาว่าพี่ชอบแมวตัวไหน</h1>
+          <div class="game-container">
+              <div class="level-indicator">Level 1</div>
+  
+              <div class="card" id="cat-card">
+                  <img id="cat-image" src="/api/placeholder/400/320" alt="Cat image">
+                  <div class="card-description" id="cat-description">นี่คือแมวธรรมดา</div>
+                  <div class="swipe-indicator swipe-left" id="swipe-left">✖</div>
+                  <div class="swipe-indicator swipe-right" id="swipe-right">✓</div>
+                  <div class="incorrect-overlay" id="incorrect-overlay">❌</div>
+              </div>
+  
+              <div class="buttons">
+                  <button class="btn btn-reject" id="reject-btn">✖</button>
+                  <button class="btn btn-like" id="like-btn">✓</button>
+              </div>
+  
+              <div class="level-complete">
+                  <h2>ถูกต้องพี่ชอบแมวอ้วน</h2>
+                  <p>ต่อไปเดาว่าพี่เลี้ยงแมวตัวไหน</p>
+                  <button class="next-btn" id="next-level-btn">มันจะไปยากไรว่ะ</button>
+              </div>
+  
+              <div class="success-screen">
+                  <h2>สุดยอด</h2>
+                  <p>คำใบ้เพิ่มคือแมนยูทีมกาก</p>
+                  <p id="final-message">ถึงพี่จะเกี่ยวข้องกับนักเตะคนนึงก็เถอะ</p>
+                  <button class="retry-btn" id="restart-btn">ว่างว่ะเล่นใหม่</button>
+              </div>
+  
+              <div class="incorrect-screen">
+                  <h2>ผิดคับน้อง</h2>
+                  <p>ไม่ใช่แมวตัวนี้</p>
+                  <p>ไปลองใหม่ไป</p>
+                  <button class="retry-btn" id="retry-btn">ขออนุญาติแก้ตัวครับ</button>
+              </div>
+  
+              <!-- New screen to display when the daily limit is reached -->
+              <div class="daily-limit-reached">
+                  <h2>หมดโควต้าวันนี้แล้วนะ</h2>
+                  <p>พรุ่งนี้มาเล่นใหม่นะจ๊ะ</p>
+              </div>
+          </div>
+      </div>
+      <script src="script.js"></script>
+  </body>
 </html>
